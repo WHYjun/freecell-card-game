@@ -67,7 +67,7 @@ public class Email {
         return address.toLowerCase();
     }
 
-    // Set Methods
+    // Set methods
     public void setMailboxCapacity(int capacity){
         this.mailboxCapacity = capacity;
     }
@@ -79,5 +79,28 @@ public class Email {
     // Change the password
     public void changePassword(String newPassword){
         this.password = newPassword;
+    }
+
+    // Get methods (It's okay without this)
+    public int getMailboxCapacity(){
+        return this.mailboxCapacity;
+    }
+
+    public String getAlternateEmail(){
+        return this.alternateEmail;
+    }
+
+    public String getPassword(){
+        return this.password;
+    }
+
+    public String getFullName(){
+        return this.firstName + " " + this.lastName;
+    }
+
+    public String showInfo(){
+        return "DISPLAY NAME: " + firstName + " " + lastName +
+                " EMAIL ADDRESS: " + email + " MAILBOX CAPACITY: " +
+                mailboxCapacity + "mb";
     }
 }
